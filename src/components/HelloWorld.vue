@@ -1,18 +1,29 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <SomeButtons/>
+    <DataSender
+      @sending-start="started"
+      @sending-complete="completed"
+    />
   </div>
 </template>
 
 <script>
-import SomeButtons from "@/components/SomeButtons";
+import DataSender from "@/components/DataSender";
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
   },
-  components: {SomeButtons}
+  components: {DataSender},
+  methods: {
+    started () {
+      console.log('🟢 Started')
+    },
+    completed () {
+      console.log('🏁 Completed')
+    }
+  }
 }
 </script>
 
