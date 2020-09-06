@@ -1,15 +1,18 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <SomeButtons/>
   </div>
 </template>
 
 <script>
+import SomeButtons from "@/components/SomeButtons";
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  components: {SomeButtons}
 }
 </script>
 
