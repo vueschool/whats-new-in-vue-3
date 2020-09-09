@@ -29,6 +29,8 @@ In this course, you will not learn Vue.js from scratch. If you are looking to ge
 **Next Steps**
 Once you complete this course, we recommend you to expand your Composition API knowledge by diving into our [In-depth Vue 3 Composition API course](https://vueschool.io/courses/vue-3-composition-api).
 
+[Click here to watch the course](https://vueschool.io/courses/whats-new-in-vue-3)
+
 ---
 
 # vue-3-cool-app
