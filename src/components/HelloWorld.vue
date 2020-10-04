@@ -1,36 +1,30 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-
-    <button @click="showMessage = !showMessage">Toggle Message</button>
-    <button @click="showModal = true">Show Modal</button>
-
+    <h1>Vue 3</h1>
+    <h2>Reactivity</h2>
+    {{website}}
+    <hr>
+    <button @click="addTwitter">Add Twitter</button>
+    <button @click="removeLink">Remove Link</button>
   </div>
-  <teleport to="#modal-container" :disabled="false">
-    <BaseModal v-if="showModal">
-      <h1>Hi Vue School</h1>
-      <button @click="showModal = false">Close</button>
-    </BaseModal>
-  </teleport>
-
-
-  <teleport to="#purple-box">
-    <p v-if="showMessage">Hello from HelloWorld</p>
-  </teleport>
 </template>
 
 <script>
-import BaseModal from "@/components/BaseModal";
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  },
-  components: {BaseModal},
   data () {
     return {
-      showMessage: true,
-      showModal: false
+      website: {
+        name: 'Vue School',
+        link: 'vueschool.io'
+      }
+    }
+  },
+  methods: {
+    addTwitter () {
+      this.website.twitter = '@vueschool_io'
+    },
+    removeLink () {
+      delete this.website.link
     }
   }
 }

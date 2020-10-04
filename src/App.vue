@@ -1,11 +1,8 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Vue 3"/>
+    <HelloWorld/>
   </div>
-  <teleport to="#purple-box">
-    <button>DO NOT CLICK</button>
-  </teleport>
 </template>
 
 <script>
