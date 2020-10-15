@@ -1,30 +1,25 @@
 <template>
   <div class="hello">
     <h1>Vue 3</h1>
-    <h2>Reactivity</h2>
-    {{website}}
+    Username: {{username}}
+    Pass: {{password}}
     <hr>
-    <button @click="addTwitter">Add Twitter</button>
-    <button @click="removeLink">Remove Link</button>
+
+    <LoginForm
+      v-model:username="username"
+      v-model:password="password"
+    />
   </div>
 </template>
 
 <script>
+import LoginForm from "@/components/LoginForm";
 export default {
+  components: {LoginForm},
   data () {
     return {
-      website: {
-        name: 'Vue School',
-        link: 'vueschool.io'
-      }
-    }
-  },
-  methods: {
-    addTwitter () {
-      this.website.twitter = '@vueschool_io'
-    },
-    removeLink () {
-      delete this.website.link
+      username: null,
+      password: null
     }
   }
 }
